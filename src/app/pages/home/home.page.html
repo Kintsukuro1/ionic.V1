@@ -22,31 +22,31 @@
       
       <ion-item #itemNombre>
         <ion-input name="nombre" label="Nombre" labelPlacement="floating" type="text" 
-          [(ngModel)]="usuario.nombre"></ion-input>
+          [(ngModel)]="persona.nombre"></ion-input>
       </ion-item>
 
       
       <ion-item #itemApellido>
         <ion-input name="apellido" label="Apellido" labelPlacement="floating" type="text" 
-          [(ngModel)]="usuario.apellido"></ion-input>
+          [(ngModel)]="persona.apellido"></ion-input>
       </ion-item>
 
       
       <ion-item #itemEducacion>
-        <ion-select 
-            name="nivelEducacional" label="Educación" labelPlacement="floating"
-            [(ngModel)]="idNivelEducacional" (ngModelChange)="cambiarNivelEducacional()">
-          <ion-select-option *ngFor="let nived of nivelesEducacionales" [value]="nived.id">
-            {{ nived.nombre }}
-          </ion-select-option>
-        </ion-select>
+        <ion-select placeholder="Seleccione nivel" 
+        [(ngModel)]="persona.nivelEducacional.id">
+      <ion-select-option *ngFor="let nivelEducacional of nivelesEducacionales" 
+        [value]="nivelEducacional.id">
+          {{nivelEducacional.nombre}}
+      </ion-select-option>
+    </ion-select>
       </ion-item>
 
       
       <ion-item #itemFechaNacimiento>
         <mat-form-field slot="start" [ngClass]="'fecha'">
           <mat-label>Nacimiento</mat-label>
-          <input matInput name="date" [matDatepicker]="fecha" [(ngModel)]="usuario.fechaNacimiento" readonly>
+          <input matInput name="date" [matDatepicker]="fecha" [(ngModel)]="persona.fechaNacimiento" readonly>
           <mat-datepicker-toggle matSuffix [for]="fecha"></mat-datepicker-toggle>
           <mat-datepicker #fecha></mat-datepicker>
         </mat-form-field>
