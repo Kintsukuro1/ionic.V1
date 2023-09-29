@@ -38,15 +38,15 @@
             <ion-input name="password"  label="Contraseña" labelPlacement="floating" type="password" [(ngModel)]="usuario.password"></ion-input>
           </ion-item>
 
-          
-          <ion-button shape="block" (click)="ingresar()">Ingresar</ion-button>
+          <br>
+          <ion-button shape="round" (click)="ingresar()">Ingresar</ion-button>
 
         </ion-card-content>
       </form>
       
       <ion-label>
         <br>
-        <a (click)="ingresarPaginaValidarCorreo()">Recuperar contraseña</a>
+        <ion-button shape="round" (click)="ingresarPaginaValidarCorreo()">Recuperar contraseña</ion-button>
       </ion-label>
     </ion-card>
   </div>

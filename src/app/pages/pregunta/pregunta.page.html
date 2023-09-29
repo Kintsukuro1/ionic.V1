@@ -4,11 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-card>
+  <ion-card-header>
+    <ion-card-title> usuario: {{ usuario.nombre }} </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h2> {{ usuario.preguntaSecreta }}</h2>
+  </ion-card-content>
+  </ion-card>
 
 <ion-content>
   <ion-card>
     <ion-card-subtitle>Ingresa tu respuesta</ion-card-subtitle>
-    <ion-input type="text" [(ngModel)]="respuesta" placeholder="Ingresa tu correo"></ion-input>
-    <a (click)="validarRespuestaSecreta()">Recuperar contraseña</a>
+    <ion-input type="text" [(ngModel)]="respuesta" placeholder="Respuesta de pregunta secreta"></ion-input>
+    <ion-button (click)="validarRespuestaSecreta()">Recuperar contraseña</ion-button>
   </ion-card>
 </ion-content>

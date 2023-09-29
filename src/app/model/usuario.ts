@@ -30,11 +30,9 @@ export class Usuario {
     return lista;
   }
 
-  public buscarUsuarioValido(correo: string, password: string): Usuario {
-    const usuario = this.listaUsuariosValidos().find(
+  public buscarUsuarioValido(correo: string, password: string): Usuario | undefined{
+    return this.listaUsuariosValidos().find(
       usu => usu.correo === correo && usu.password === password);
-    return usuario ? usuario : new Usuario('', '', '', '', '');
-
   }
 
   public buscarUsuarioPorCorreo(correo: string): Usuario | undefined {

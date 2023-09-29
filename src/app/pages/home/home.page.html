@@ -11,7 +11,7 @@
   <ion-title class="ion-padding-top">
     <ion-label class="ion-text-center">
       <h1>¡Bienvenido!</h1>
-      <p *ngIf="usuario">Usuario: {{ usuario.correo }}</p>
+      <h2 *ngIf="usuario">{{ usuario.nombre }}</h2>
       <h4>Información Adicional</h4>
     </ion-label>
   </ion-title>
@@ -33,13 +33,14 @@
 
       
       <ion-item #itemEducacion>
+        <ion-label>Educación</ion-label>
         <ion-select placeholder="Seleccione nivel" 
-        [(ngModel)]="persona.nivelEducacional.id">
-      <ion-select-option *ngFor="let nivelEducacional of nivelesEducacionales" 
-        [value]="nivelEducacional.id">
-          {{nivelEducacional.nombre}}
-      </ion-select-option>
-    </ion-select>
+          [(ngModel)]="persona.nivelEducacional.id">
+          <ion-select-option *ngFor="let nivelEducacional of nivelesEducacionales" 
+          [value]="nivelEducacional.id">
+            {{nivelEducacional.nombre}}
+          </ion-select-option>
+        </ion-select>
       </ion-item>
 
       

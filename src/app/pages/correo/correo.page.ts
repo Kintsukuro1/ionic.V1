@@ -20,7 +20,7 @@ export class CorreoPage implements OnInit {
     const usuario = new Usuario('', '', '', '', '');
     const usuarioEncontrado = usuario.buscarUsuarioPorCorreo(this.correo);
     if (!usuarioEncontrado) {
-      alert('EL CORREO NO EXISTE DENTRO DE LAS CUENTAS VALIDAS DEL SISTEMA'); //carita triste
+      this.router.navigate(['/incorrecto']);
     }
     else {
       const navigationExtras: NavigationExtras = {
