@@ -1,0 +1,40 @@
+<ion-content class="background"></ion-content>
+<ion-header>
+  <div>
+    <ion-toolbar>
+      <div slot="start" class="animation-container">
+        <ion-title class="title-animation">Correcto</ion-title>
+      </div>
+      <!-- Agrega la imagen aquí -->
+      <div slot="end">
+        <img src="https://www.thegeniuschoice.com/wp-content/uploads/2017/10/Logo-DUOC-transparente-200x45.png" alt="Logo DUOC" class="image-animation">
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal ion-text-center">
+
+  <ion-card name="correctocarta" class="ion-text-center">
+    <ion-title size="large">
+    <h2>Bien!</h2>
+    </ion-title>
+
+   
+      <img src="assets/img/correcto.jpg" />
+    
+
+    <ion-label>
+      <h1>Tu contraseña es:</h1>
+    </ion-label>
+    <ion-label>
+      <h2>{{password}}</h2>
+    </ion-label>
+    
+
+  </ion-card>
+  <ion-label>
+    <ion-button shape="round" text-align="center" href="">Iniciar sesión</ion-button>
+  </ion-label>
+</ion-content> 
+

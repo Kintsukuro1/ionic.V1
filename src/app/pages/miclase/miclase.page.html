@@ -1,0 +1,59 @@
+<ion-content class="background"></ion-content>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <!--Barra de de botones-->
+    <br>
+    <div slot="start" class="animation-container">
+      <ion-button color="red" class="title-animation" fill="clear" (click)="redi_inicio()">Inicio</ion-button>
+
+      <ion-button color="black" class="title-animation" fill="clear" (click)="redi_clase()">Mi Clase</ion-button>
+    </div>
+
+    <!--Imagen-->
+    <div slot="end">
+      <img width="150px" src="assets/icon/logo-duoc.png" alt="Logo DUOC" class="image-animation">
+    </div>  
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content height= "100%" [fullscreen]="true" class="ion-padding-horizontal">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>      
+
+      <ion-card-title>Detalles de la Clase</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Sede: {{sede}}</p>
+      <p>Sigla: {{ bloqueInicio }}</p>
+      <p>Seccion:{{seccion}}</p>
+      <p>Nombre asignatura: {{nombreAsignatura}}</p>
+      <p>Nombre profesor: {{nombreProfesor}}</p>
+      <p>Día: {{dia}}</p>
+      <p>Bloque de inicio:  {{bloqueInicio}}</p>
+      <p>Bloque de termino: {{bloqueTermino}}</p>
+      <p>Hora de inicio:  {{horaInicio}}</p>
+      <p>Hora de termino: {{horaFin}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div slot="start" class="animation-container">
+      <ion-button shape="round" text-align="center" fill="solid" (click)="redi_inicio()">Inicio</ion-button>
+
+      <ion-button shape="round" text-align="center" fill="solid" (click)="redi_clase()">Mi Clase</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
