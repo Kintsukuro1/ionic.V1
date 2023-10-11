@@ -42,9 +42,17 @@ export class IngresarPage implements OnInit {
       // Navegamos hacia el Home y enviamos la información extra
       this.router.navigate(['/miclase'], navigationExtras);
     }else{
-      console.log("no pasa");
+      this.mostrarMensaje('Las credenciales no son correctas!');
+      false;
     }
     
+  }
+  async mostrarMensaje(mensaje: string, duracion?: number) {
+    const toast = await this.toastController.create({
+        message: mensaje,
+        duration: duracion? duracion: 2000
+      });
+    toast.present();
   }
 
   public goCorreo():void{
